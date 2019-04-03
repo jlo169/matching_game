@@ -1,0 +1,140 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    background-color: brown;
+    height: 20vh;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.pugLogo {
+    background-color: slateblue;
+    display: inline-flex;
+    position: relative;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    flex: 25%;
+}
+
+.title {
+    text-align: center;
+    background-color: khaki;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex: 50%;
+}
+
+.settings {
+    background-color:grey;
+    width: 100%;
+    flex: 25%;
+    position: relative;
+}
+
+.buttons {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.mainBody {
+    background-color: burlywood;
+    height: 85%;
+    display: flex;
+}
+
+.gameInfo {
+    background-color: bisque;
+    height: 100%;
+    width: 20%;
+}
+
+.gameArea {
+    background-color: dodgerblue;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.row1,
+.row2,
+.row3 {
+    height: 28%;
+    width: 85%;
+    display: flex;
+    margin-left: 1%;
+}
+
+.row1 {
+    /* background-color: aliceblue; */
+    margin-top: 1%;
+}
+
+/* .row2 {
+    background-color: antiquewhite;
+}
+.row3 {
+    background-color: aqua;
+} */
+
+.cardContainer {
+    /* background-color: black; */
+    width: 16.66%;
+    height: 100%;
+    position: relative;
+}
+
+.card {
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    background-color: tan;
+    border-radius: 12px;
+    position: relative;
+    float: left;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+.front {
+    background-color: white;
+    background-image: url(images/potato.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.back {
+    background-color: tan;
+    background-image: url(images/PuglieFace_01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card:hover > .back {
+    display: none;
+    /* transform: scale(.95);
+    transition: all .25s ease-in-out; */
+}
+
+.card:hover > .front {
+    transform: scale(1.05);
+    transition: .25s ease-in-out;
+}
