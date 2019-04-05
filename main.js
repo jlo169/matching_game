@@ -1,16 +1,44 @@
 $(document).ready(initializeApp)
 
 function initializeApp() {
+    generateGameBoard();
     $('.cardContainer').on('click', '.back', cardClicked);
 
 }
-
 var firstCardClicked = null;
 var secondCardClicked = null;
 var totalPossibleMatches = 2;
 var matchCounter = 0;
 
-$('.gameArea').on('click', '.back', cardClicked)
+var cardArray = [
+    images/babyPug.png,
+    images/layingDown.png,
+    images/leo.jpg,
+    images/potato.png,
+    images/pugSnow.png,
+    images/rainbow.jpg,
+    images/sitting.png,
+    images/sleepyPug.jpg,
+    images/whiteDog.jpg
+];
+
+function generateGameBoard() {
+    for (var rowNum = 1; rowNum <=3; rowNum++) {
+        var makeRow = $('<div>').addClass('row' + rowNum);
+        for (var i = 1; i <= 6; i++) {
+            var makeCardContainer = $('<div>').addClass('cardContainer');
+            var makeCard = $('<div>').addClass('card');
+            var makeFront = $('<div>').addClass('front');
+            var makeBack = $('<div>').addClass('back');
+
+            makeCard.append(makeFront, makeBack);
+            makeCardContainer.append(makeCard);
+            makeRow.append(makeCardContainer);
+           
+        }
+        $('.gameArea').append(makeRow)
+    }
+}
 
 function cardClicked() {
     // console.log(this)
@@ -26,6 +54,7 @@ function cardClicked() {
             matchCounter++;
             firstCardClicked = null;
             secondCardClicked = null;
+
             if (matchCounter === totalPossibleMatches) {
                 $('.title').text('win');
             }

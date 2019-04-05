@@ -61,7 +61,7 @@ body {
 }
 
 .gameArea {
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
     position: relative;
     height: 100%;
     width: 100%;
@@ -77,16 +77,16 @@ body {
 }
 
 .row1 {
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
     margin-top: 1%;
 }
 
-/* .row2 {
+.row2 {
     background-color: antiquewhite;
 }
 .row3 {
     background-color: aqua;
-} */
+}
 
 .cardContainer {
     /* background-color: black; */
@@ -116,7 +116,7 @@ body {
 .front {
     background-color: white;
     background-image: url(images/potato.png);
-    background-size: auto 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -130,12 +130,12 @@ body {
 }
 
 .card:hover > .back {
-    /* display: none; */
-    /* transform: scale(.95);
-    transition: all .25s ease-in-out; */
+    display: none; 
+    transform: scale(.95);
+    transition: all .25s ease-in-out;
 }
 
 .card:hover > .front {
-    /* transform: scale(1.05);
-    transition: .25s ease-in-out; */
+    transform: scale(1.05);
+    transition: .25s ease-in-out;
 }
