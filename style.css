@@ -136,7 +136,15 @@ img {
     background-position: center;
 }
 
-.card:hover > .back {
+.faded {
+    opacity: 0.5;
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+/* .card:hover > .back {
     display: none; 
     transform: scale(.95);
     transition: all .25s ease-in-out;
@@ -145,4 +153,4 @@ img {
 .card:hover > .front {
     transform: scale(1.05);
     transition: .25s ease-in-out;
-}
+} */

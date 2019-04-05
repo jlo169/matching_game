@@ -4,7 +4,7 @@ $(document).ready(initializeApp)
 function initializeApp() {
     generateGameBoard();
     
-    $('.cardContainer').on('click', '.back', cardClicked);
+    $('.gameArea').on('click', '.back', cardClicked);
 }
 
 var firstCardClicked = null;
@@ -23,9 +23,9 @@ var cardArray = [
     'images/sleepyPug.jpg',
     'images/whiteDog.jpg'
 ];
+var cardFaces = cardArray.concat(cardArray)
 
 function generateGameBoard() {
-    var cardFaces = generateCardFront(cardArray);
 
     for (var rowNum = 1; rowNum <=3; rowNum++) {
         var makeRow = $('<div>').addClass('row' + rowNum);
@@ -48,23 +48,12 @@ function generateGameBoard() {
     }
 }
 
-function generateCardFront(arr) {
-    var allCardArray = [];
-
-    for (var i = 0; i < arr.length; i++) {
-        allCardArray.push(arr[i]);
-        allCardArray.push(arr[i]);
-    }
-    return allCardArray;
-}
-
-$('.cardContainer').on('click', '.back', cardClicked);
+$('.gameArea').on('click', '.back', cardClicked);
 
 function cardClicked() {
     // console.log(this)
-    // console.log($(this).prev().find('img').attr('src'))
-    // console.log(e)
-    if ($(this).hasClass('flipped'))
+    console.log(this);
+    console.log('card was clicked')
     $(this).toggle().addClass('flipped');
 
     if (firstCardClicked === null) {
@@ -76,19 +65,23 @@ function cardClicked() {
             matchCounter++;
             firstCardClicked = null;
             secondCardClicked = null;
+            $('.flipped').removeClass('flipped back').prev().find('img').addClass('faded')
 
             if (matchCounter === totalPossibleMatches) {
                 $('.title').text('win');
             }
             return;
         } else {
+            $('.back').addClass('unclickable');
             setTimeout(function() {
                 console.log('timing out');
-                $('.flipped').toggle();
-                $('.back').removeClass('flipped');
+                $('.flipped').toggle().removeClass('flipped');
+                // $('.back').removeClass('flipped');
                 firstCardClicked = null;
                 secondCardClicked = null;
-            }, 2000);
+                console.log('hi');
+                $('.back').removeClass('unclickable');
+            }, 1000);
             return; 
         }
     }
