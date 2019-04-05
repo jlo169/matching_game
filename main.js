@@ -3,7 +3,6 @@ $(document).ready(initializeApp)
 
 function initializeApp() {
     generateGameBoard();
-    
     $('.gameArea').on('click', '.back', cardClicked);
 }
 
@@ -51,9 +50,9 @@ function generateGameBoard() {
 $('.gameArea').on('click', '.back', cardClicked);
 
 function cardClicked() {
-    // console.log(this)
-    console.log(this);
-    console.log('card was clicked')
+    if ($(this).hasClass('flipped')) {
+        return;
+    }
     $(this).toggle().addClass('flipped');
 
     if (firstCardClicked === null) {
@@ -74,12 +73,9 @@ function cardClicked() {
         } else {
             $('.back').addClass('unclickable');
             setTimeout(function() {
-                console.log('timing out');
                 $('.flipped').toggle().removeClass('flipped');
-                // $('.back').removeClass('flipped');
                 firstCardClicked = null;
                 secondCardClicked = null;
-                console.log('hi');
                 $('.back').removeClass('unclickable');
             }, 1000);
             return; 
