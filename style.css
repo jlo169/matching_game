@@ -49,7 +49,7 @@ body {
 }
 
 .mainBody {
-    background-color: burlywood;
+    background-color: slateblue;
     height: 85%;
     display: flex;
 }
@@ -77,22 +77,26 @@ body {
 }
 
 .row1 {
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     margin-top: 1%;
 }
 
-.row2 {
+/* .row2 {
     background-color: antiquewhite;
 }
 .row3 {
     background-color: aqua;
-}
+} */
 
 .cardContainer {
     /* background-color: black; */
     width: 16.66%;
     height: 100%;
     position: relative;
+}
+
+.card > * {
+    border-radius: 12px;
 }
 
 .card {
@@ -111,14 +115,17 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    border-radius: 12px;
 }
-.front {
-    background-color: white;
-    background-image: url(images/potato.png);
+
+img {
+    /* background-color: white;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    
 }
 
 .back {
