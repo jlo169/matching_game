@@ -47,8 +47,6 @@ function generateGameBoard() {
     }
 }
 
-$('.gameArea').on('click', '.back', cardClicked);
-
 function cardClicked() {
     if ($(this).hasClass('flipped')) {
         return;
@@ -71,12 +69,12 @@ function cardClicked() {
             }
             return;
         } else {
-            $('.back').addClass('unclickable');
+            $('.gameArea').off('click', '.back', cardClicked);
             setTimeout(function() {
                 $('.flipped').toggle().removeClass('flipped');
                 firstCardClicked = null;
                 secondCardClicked = null;
-                $('.back').removeClass('unclickable');
+                $('.gameArea').on('click', '.back', cardClicked);
             }, 1000);
             return; 
         }

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'quite-magical';
+    src: url(font/Quite\ Magical\ -\ TTF.ttf);
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -23,7 +28,7 @@ body {
     flex: 25%;
 }
 
-.title {
+.titlePage {
     text-align: center;
     background-color: khaki;
     position: relative;
@@ -31,38 +36,58 @@ body {
     height: 100%;
     width: 100%;
     flex: 50%;
+    font-family: quite-magical;
+    font-size: 7em;
+    display: flex;
 }
 
-.settings {
-    background-color:grey;
+.title {
+    margin: 5%;
+}
+
+.stats {
+    /* background-color:grey; */
     width: 100%;
     flex: 25%;
     position: relative;
 }
 
-.buttons {
-    display: inline-block;
+.mainBody {
+    /* background-color: slateblue; */
+    height: 85%;
+    display: flex;
     position: relative;
+    background-image: url(images/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.gameInfo {
+    /* background-color: bisque; */
+    height: 100%;
+    width: 20%;
+}
+
+.attempts, 
+.accuracy {
+
+}
+.attempts {
+    display: inline-block;
     bottom: 0;
     right: 0;
     position: absolute;
 }
 
-.mainBody {
-    background-color: slateblue;
-    height: 85%;
-    display: flex;
-}
-
-.gameInfo {
-    background-color: bisque;
-    height: 100%;
-    width: 20%;
+.accuracy {
+    display: inline-block;
+    position: absolute;
 }
 
 .gameArea {
     /* background-color: dodgerblue; */
-    position: relative;
+    /* position: relative; */
+    /* justify-content: center; */
     height: 100%;
     width: 100%;
 }
@@ -70,10 +95,11 @@ body {
 .row1,
 .row2,
 .row3 {
-    height: 28%;
+    height: 25%;
     width: 85%;
     display: flex;
     margin-left: 1%;
+
 }
 
 .row1 {
@@ -130,14 +156,11 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border: 2px solid black;
 }
 
 .faded {
     opacity: 0.5;
-}
-
-.unclickable {
-    pointer-events: none;
 }
 
 /* .card:hover > .back {
