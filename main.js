@@ -15,6 +15,7 @@ var gamesPlayed = 0;
 var matchCounter = 0;
 var matchAttempts = 0;
 var matchAccuracy = 0; 
+var matchPlayed = 0;
 
 var cardArray = [
     'images/babyPug.png',
@@ -50,6 +51,8 @@ function generateGameBoard() {
         }
         $('.gameArea').append(makeRow)
     }
+    var makeResetButton = $('<button>').addClass('reset').text('Reset');
+    $('.gameArea').append(makeResetButton);
 }
 
 function matchingAccuracy() {
@@ -68,7 +71,7 @@ function cardClicked() {
 
     } else if (secondCardClicked === null) {
         secondCardClicked = $(this).prev().find('img').attr('src');
-        $('.attempts').text(`Attempts: ${++matchAttempts}`);
+        $('.attempts').text(`Attempts ${++matchAttempts}`);
         if (firstCardClicked === secondCardClicked) {
             matchCounter++;
             matchingAccuracy();
@@ -94,14 +97,6 @@ function cardClicked() {
     }
 }
 
-
-
-
-function runPuglieRun() {
-    var makePuglie = $('div').addClass('puglie');
-    $('.gameArea').append(makePuglie);
-}
-
 function resetEverything() {
     gamesPlayed = 0;
     matchCounter = 0;
@@ -113,3 +108,10 @@ function resetEverything() {
     cardFaces = cardArray.concat(cardArray)
     generateGameBoard();
 }
+
+
+function runPuglieRun() {
+    var makePuglie = $('div').addClass('puglie');
+    $('.gameArea').append(makePuglie);
+}
+
