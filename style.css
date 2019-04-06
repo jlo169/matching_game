@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    background-color: brown;
+    background-color: beige;
     height: 20vh;
     margin: 0;
     display: flex;
@@ -18,7 +18,7 @@ body {
 }
 
 .pugLogo {
-    background-color: slateblue;
+    background-color: tan;
     display: inline-flex;
     position: relative;
     height: 90%;
@@ -26,17 +26,18 @@ body {
     top: 5%;
     left: 5%;
     flex: 25%;
+    border-radius: 12px;
 }
 
 .titlePage {
     text-align: center;
-    background-color: khaki;
+    /* background-color: khaki; */
     position: relative;
     justify-content: center;
     height: 100%;
     width: 100%;
     flex: 50%;
-    font-family: quite-magical;
+    font-family: quite-magical, cursive;
     font-size: 7em;
     display: flex;
 }
@@ -50,6 +51,18 @@ body {
     width: 100%;
     flex: 25%;
     position: relative;
+    font-family: quite-magical, cursive;
+    font-size: 3em;
+}
+
+.statsBox {
+    background-color: tan;
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    border-radius: 12px;
 }
 
 .mainBody {
@@ -57,7 +70,7 @@ body {
     height: 85%;
     display: flex;
     position: relative;
-    background-image: url(images/background.png);
+    background-image: url(images/background2.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -70,18 +83,10 @@ body {
 
 .attempts, 
 .accuracy {
-
-}
-.attempts {
+    top: 25%;
+    left: 10%;
     display: inline-block;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-}
-
-.accuracy {
-    display: inline-block;
-    position: absolute;
+    position: relative;
 }
 
 .gameArea {
@@ -90,16 +95,26 @@ body {
     /* justify-content: center; */
     height: 100%;
     width: 100%;
+    position: relative;
 }
+
+/* .puglie {
+    position: absolute;
+    margin-bottom: 2%;
+    left: 5%;
+    background-image: url(images/puglie-standing.gif);
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+} */
 
 .row1,
 .row2,
 .row3 {
-    height: 25%;
+    height: 24%;
     width: 85%;
     display: flex;
-    margin-left: 1%;
-
+    margin: auto 6%;
 }
 
 .row1 {
@@ -173,3 +188,8 @@ body {
     transform: scale(1.05);
     transition: .25s ease-in-out;
 } */
+
+
+/* div is absolute, put position() value
+use jquery
+*/

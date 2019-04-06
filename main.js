@@ -3,13 +3,17 @@ $(document).ready(initializeApp)
 
 function initializeApp() {
     generateGameBoard();
+    // runPuglieRun();
     $('.gameArea').on('click', '.back', cardClicked);
 }
 
 var firstCardClicked = null;
 var secondCardClicked = null;
 var totalPossibleMatches = 9;
+var gamesPlayed = 0;
 var matchCounter = 0;
+var matchAttempts = 0;
+var matchAccuracy = 0; 
 
 var cardArray = [
     'images/babyPug.png',
@@ -47,6 +51,11 @@ function generateGameBoard() {
     }
 }
 
+function matchingAccuracy() {
+    matchAccuracy = Math.floor(matchCounter / matchAttempts * 100);
+    $('.accuracy').text(`Accuracy ${matchAccuracy}%`);
+}
+
 function cardClicked() {
     if ($(this).hasClass('flipped')) {
         return;
@@ -58,8 +67,10 @@ function cardClicked() {
 
     } else if (secondCardClicked === null) {
         secondCardClicked = $(this).prev().find('img').attr('src');
+        $('.attempts').text(`Attempts: ${++matchAttempts}`);
         if (firstCardClicked === secondCardClicked) {
             matchCounter++;
+            matchingAccuracy();
             firstCardClicked = null;
             secondCardClicked = null;
             $('.flipped').removeClass('flipped back').prev().find('img').addClass('faded')
@@ -76,7 +87,16 @@ function cardClicked() {
                 secondCardClicked = null;
                 $('.gameArea').on('click', '.back', cardClicked);
             }, 1000);
+            matchingAccuracy();
             return; 
         }
     }
+}
+
+
+
+
+function runPuglieRun() {
+    var makePuglie = $('div').addClass('puglie');
+    $('.gameArea').append(makePuglie);
 }
