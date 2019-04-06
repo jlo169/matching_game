@@ -5,6 +5,7 @@ function initializeApp() {
     generateGameBoard();
     // runPuglieRun();
     $('.gameArea').on('click', '.back', cardClicked);
+    $('.reset').on('click', resetEverything);
 }
 
 var firstCardClicked = null;
@@ -99,4 +100,16 @@ function cardClicked() {
 function runPuglieRun() {
     var makePuglie = $('div').addClass('puglie');
     $('.gameArea').append(makePuglie);
+}
+
+function resetEverything() {
+    gamesPlayed = 0;
+    matchCounter = 0;
+    matchAttempts = 0;
+    matchAccuracy = 0; 
+    $('.attempts').text(`Attempts 0`);
+    $('.accuracy').text(`Accuracy 0%`);
+    $('.gameArea').empty();
+    cardFaces = cardArray.concat(cardArray)
+    generateGameBoard();
 }
