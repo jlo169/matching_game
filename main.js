@@ -6,6 +6,7 @@ function initializeApp() {
     // runPuglieRun();
     $('.gameArea').on('click', '.back', cardClicked);
     $('.gameArea').on('click', '.reset', resetEverything);
+    $('.modalTest').on('click', toggleModal);
 }
 
 var firstCardClicked = null;
@@ -132,5 +133,9 @@ function resetEverything() {
 function runPuglieRun() {
     var makePuglie = $('div').addClass('puglie');
     $('.gameArea').append(makePuglie);
+}
+
+function toggleModal() {
+    $('.modal').toggleClass('showModal');
 }
 

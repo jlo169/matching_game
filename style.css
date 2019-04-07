@@ -169,17 +169,6 @@ body {
     opacity: 0.5;
 }
 
-.reset {
-    position: absolute;
-    left: 1%;
-    bottom: 1%;
-    font-family: quite-magical;
-    font-size: 2em;
-    background-color: tan;
-    border-radius: 12px;
-    border: white solid 2px;
-}
-
 .card:hover > .back { 
     transform: scale(1.05);
     transition: all .1s ease-in-out;
@@ -194,3 +183,56 @@ body {
 /* div is absolute, put position() value
 use jquery
 */
+
+.modal {
+    font-family: quite-magical, cursive;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    /* transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
+}
+
+.modalContent {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: tan;
+    border: white solid;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 12px;
+    text-align: center; 
+}
+
+.modalContent > h1 {
+    font-size: 4em;
+    margin-top: 5%;
+    margin-bottom: 10%
+}
+
+.modalContent > button {
+    margin: 0 40%;
+    margin-bottom: 5px;
+}
+
+.showModal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.reset {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    font-family: quite-magical;
+    font-size: 2em;
+    background-color: tan;
+    border-radius: 12px;
+    border: white solid 2px;
+}
