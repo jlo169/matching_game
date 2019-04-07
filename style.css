@@ -162,6 +162,7 @@ body {
     background-position: center;
     border: 2px solid black;
     cursor: pointer;
+    opacity: .5;
 }
 
 .faded {

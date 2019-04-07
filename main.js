@@ -5,7 +5,7 @@ function initializeApp() {
     generateGameBoard();
     // runPuglieRun();
     $('.gameArea').on('click', '.back', cardClicked);
-    $('.reset').on('click', resetEverything);
+    $('.gameArea').on('click', '.reset', resetEverything);
 }
 
 var firstCardClicked = null;
@@ -26,9 +26,28 @@ var cardArray = [
     'images/rainbow.jpg',
     'images/sitting.png',
     'images/sleepyPug.jpg',
-    'images/whiteDog.jpg'
+    'images/whiteDog.jpg',
+    'images/blackPug.jpg',
+    'images/grumble.jpg',
+    'images/princess.jpg',
+    'images/quizzical.jpg'
 ];
-var cardFaces = cardArray.concat(cardArray)
+
+var cardFaces = makeCardArray(cardArray);
+
+function makeCardArray(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    var newArray = arr.slice(0, 9);
+    return newArray.concat(newArray);
+}
+
+
+
 
 function generateGameBoard() {
 
@@ -105,7 +124,7 @@ function resetEverything() {
     $('.attempts').text(`Attempts 0`);
     $('.accuracy').text(`Accuracy 0%`);
     $('.gameArea').empty();
-    cardFaces = cardArray.concat(cardArray)
+    cardFaces = makeCardArray(cardArray);
     generateGameBoard();
 }
 
