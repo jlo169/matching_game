@@ -161,6 +161,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .faded {
@@ -178,13 +179,12 @@ body {
     border: white solid 2px;
 }
 
-/* .card:hover > .back {
-    display: none; 
-    transform: scale(.95);
-    transition: all .25s ease-in-out;
+.card:hover > .back { 
+    transform: scale(1.05);
+    transition: all .1s ease-in-out;
 }
 
-.card:hover > .front {
+/* .card:hover > .front {
     transform: scale(1.05);
     transition: .25s ease-in-out;
 } */
