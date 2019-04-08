@@ -12,7 +12,7 @@ function initializeApp() {
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var totalPossibleMatches = 3;
+var totalPossibleMatches = 9;
 var gamesPlayed = 0;
 var matchCounter = 0;
 var matchAttempts = 0;
@@ -32,7 +32,12 @@ var cardArray = [
     'images/blackPug.jpg',
     'images/grumble.jpg',
     'images/princess.jpg',
-    'images/quizzical.jpg'
+    'images/quizzical.jpg',
+    'images/capt.jpg',
+    'images/chewing.jpg',
+    'images/foodComa.jpg',
+    'images/pugrrito.jpg',
+    'images/whatkindaface.jpg'
 ];
 
 var cardFaces = makeCardArray(cardArray);
@@ -46,6 +51,13 @@ function makeCardArray(arr) {
     }
     var newArray = arr.slice(0, 9);
     return newArray.concat(newArray);
+}
+
+function runPuglieRun() {
+    var makePuglieDiv = $('<div>').addClass('puglieDiv');
+    var makePuglie = $('<img>').addClass('puglie').attr('src', 'images/pugRun.gif')
+    $(makePuglieDiv).append(makePuglie);
+    $('.gameArea').append(makePuglieDiv);
 }
 
 function generateGameBoard() {
@@ -71,6 +83,7 @@ function generateGameBoard() {
     }
     var makeResetButton = $('<button>').addClass('reset').text('Reset');
     $('.gameArea').append(makeResetButton);
+    runPuglieRun();
 }
 
 function matchingAccuracy() {
@@ -145,11 +158,6 @@ function exitPugModal() {
     $('.view').toggleClass('showModal');
 }
 
-
-// function runPuglieRun() {
-//     var makePuglie = $('<div>').addClass('puglie');
-//     $('.gameArea').append(makePuglie);
-// }
 
 
 

@@ -90,9 +90,6 @@ body {
 }
 
 .gameArea {
-    /* background-color: dodgerblue; */
-    /* position: relative; */
-    /* justify-content: center; */
     height: 100%;
     width: 100%;
     position: relative;
@@ -152,8 +149,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border: 2px solid black;
-    cursor: pointer;
-    opacity: .5;
+    cursor: pointer;  
 }
 
 .faded {
@@ -163,6 +159,22 @@ body {
 .card:hover > .back { 
     transform: scale(1.05);
     transition: all .1s ease-in-out;
+}
+
+.pugImage {
+    height: 100%;
+    width: 100%;
+}
+
+.puglieDiv {
+    position: absolute;
+    bottom: 9%;
+    right: 2%;
+}
+
+.puglie {
+    height: 80%;
+    width: 80%;
 }
 
 .modal {
@@ -238,7 +250,3 @@ body {
     font-size: 2em;
 }
 
-.pugImage {
-    height: 100%;
-    width: 100%;
-}
