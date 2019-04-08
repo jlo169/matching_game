@@ -43,7 +43,7 @@ body {
 }
 
 .title {
-    margin: 5%;
+    margin: 7% 5% 5% 5%;
 }
 
 .stats {
@@ -165,10 +165,6 @@ body {
     transition: all .1s ease-in-out;
 }
 
-/* div is absolute, put position() value
-use jquery
-*/
-
 .modal {
     font-family: quite-magical, cursive;
     position: absolute;
@@ -226,4 +222,23 @@ use jquery
     background-color: tan;
     border-radius: 12px;
     border: white solid 2px;
+    cursor: pointer;
+}
+
+.exitButton {
+    position: relative;
+    right: 5%;
+    top: 5%;
+    width: 1.5em;
+    line-height: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: chocolate;
+    font-size: 2em;
+}
+
+.pugImage {
+    height: 100%;
+    width: 100%;
 }

@@ -3,15 +3,16 @@ $(document).ready(initializeApp)
 
 function initializeApp() {
     generateGameBoard();
-    // runPuglieRun();
     $('.gameArea').on('click', '.back', cardClicked);
     $('.gameArea').on('click', '.reset', resetEverything);
+    $('.gameArea').on('dblclick', '.front', togglePugModal);
+    $('.exitButton').on('click', exitPugModal);
     $('.victory').on('click', resetEverything);
 }
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var totalPossibleMatches = 1;
+var totalPossibleMatches = 3;
 var gamesPlayed = 0;
 var matchCounter = 0;
 var matchAttempts = 0;
@@ -89,6 +90,7 @@ function cardClicked() {
     } else if (secondCardClicked === null) {
         secondCardClicked = $(this).prev().find('img').attr('src');
         $('.attempts').text(`Attempts ${++matchAttempts}`);
+
         if (firstCardClicked === secondCardClicked) {
             matchCounter++;
             matchingAccuracy();
@@ -99,7 +101,7 @@ function cardClicked() {
             if (matchCounter === totalPossibleMatches) {
                 gamesPlayed++;
                 $('p').text(`Games Won: ${gamesPlayed}`)
-                toggleModal();
+                toggleVictoryModal();
             }
             return;
         } else {
@@ -123,20 +125,31 @@ function resetEverything() {
     $('.attempts').text(`Attempts 0`);
     $('.accuracy').text(`Accuracy 0%`);
     $('.gameArea').empty();
-    toggleModal();
+    toggleVictoryModal();
     cardFaces = makeCardArray(cardArray);
     generateGameBoard();
 }
 
-function toggleModal() {
+function toggleVictoryModal() {
     $('.victoryPug').attr('src', 'images/victory.gif')
-    $('.modal').toggleClass('showModal');
+    $('.win').toggleClass('showModal');
 }
 
-function runPuglieRun() {
-    var makePuglie = $('<div>').addClass('puglie');
-    $('.gameArea').append(makePuglie);
+function togglePugModal() {
+    var viewThePug = $(this).find('img').attr('src')
+    $('.pugImage').attr('src', viewThePug);
+    $('.view').toggleClass('showModal');
 }
+
+function exitPugModal() {
+    $('.view').toggleClass('showModal');
+}
+
+
+// function runPuglieRun() {
+//     var makePuglie = $('<div>').addClass('puglie');
+//     $('.gameArea').append(makePuglie);
+// }
 
 
 
