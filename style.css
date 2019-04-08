@@ -211,7 +211,13 @@ use jquery
 .modalContent > h1 {
     font-size: 4em;
     margin-top: 5%;
-    margin-bottom: 10%
+    margin-bottom: 2%;
+}
+
+.modalContent > p {
+    font-size: 3em;
+    margin-top: 2%;
+    margin-bottom: 15%;
 }
 
 .modalContent > button {
