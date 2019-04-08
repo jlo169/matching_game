@@ -12,7 +12,7 @@ function initializeApp() {
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var totalPossibleMatches = 9;
+var totalPossibleMatches = 3;
 var gamesPlayed = 0;
 var matchCounter = 0;
 var matchAttempts = 0;
@@ -113,7 +113,7 @@ function cardClicked() {
 
             if (matchCounter === totalPossibleMatches) {
                 gamesPlayed++;
-                $('p').text(`Games Won: ${gamesPlayed}`)
+                $('.gamesWon').text(`Games Won: ${gamesPlayed}`)
                 toggleVictoryModal();
             }
             return;

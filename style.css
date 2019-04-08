@@ -31,19 +31,26 @@ body {
 
 .titlePage {
     text-align: center;
-    /* background-color: khaki; */
     position: relative;
     justify-content: center;
     height: 100%;
     width: 100%;
     flex: 50%;
     font-family: quite-magical, cursive;
-    font-size: 7em;
     display: flex;
 }
 
 .title {
-    margin: 7% 5% 5% 5%;
+    margin: 8% 5% 5% 5%;
+    font-size: 7em;
+}
+
+.titlePage > p {
+    font-size: 2em;
+    position: absolute;
+    margin-top: 1%;
+    border-bottom: black solid 1px;
+    font-family: 'Mrs Sheppards', cursive;
 }
 
 .stats {
@@ -153,7 +160,7 @@ body {
 }
 
 .faded {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .card:hover > .back { 
