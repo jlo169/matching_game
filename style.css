@@ -49,12 +49,11 @@ body {
     font-size: 2em;
     position: absolute;
     margin-top: 1%;
-    border-bottom: black solid 1px;
     font-family: 'Mrs Sheppards', cursive;
+    text-decoration: underline;
 }
 
 .stats {
-    /* background-color:grey; */
     width: 100%;
     flex: 25%;
     position: relative;
@@ -73,7 +72,6 @@ body {
 }
 
 .mainBody {
-    /* background-color: slateblue; */
     height: 85%;
     display: flex;
     position: relative;
@@ -83,7 +81,6 @@ body {
 }
 
 .gameInfo {
-    /* background-color: bisque; */
     height: 100%;
     width: 20%;
 }

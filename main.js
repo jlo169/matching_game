@@ -12,7 +12,7 @@ function initializeApp() {
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var totalPossibleMatches = 3;
+var totalPossibleMatches = 9;
 var gamesPlayed = 0;
 var matchCounter = 0;
 var matchAttempts = 0;
