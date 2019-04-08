@@ -134,7 +134,7 @@ function toggleModal() {
 }
 
 function runPuglieRun() {
-    var makePuglie = $('div').addClass('puglie');
+    var makePuglie = $('<div>').addClass('puglie');
     $('.gameArea').append(makePuglie);
 }
 

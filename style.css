@@ -108,19 +108,10 @@ body {
 }
 
 .row1 {
-    /* background-color: aliceblue; */
     margin-top: 1%;
 }
 
-/* .row2 {
-    background-color: antiquewhite;
-}
-.row3 {
-    background-color: aqua;
-} */
-
 .cardContainer {
-    /* background-color: black; */
     width: 16.66%;
     height: 100%;
     position: relative;
@@ -174,12 +165,6 @@ body {
     transition: all .1s ease-in-out;
 }
 
-/* .card:hover > .front {
-    transform: scale(1.05);
-    transition: .25s ease-in-out;
-} */
-
-
 /* div is absolute, put position() value
 use jquery
 */
@@ -192,7 +177,7 @@ use jquery
     opacity: 0;
     visibility: hidden;
     transform: scale(1.1);
-    /* transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modalContent {
