@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'quite-magical';
+    src: url(font/Quite\ Magical\ -\ TTF.ttf);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    background-color: beige;
+    height: 20vh;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.pugLogo {
+    background-color: tan;
+    display: inline-flex;
+    position: relative;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    flex: 25%;
+    border-radius: 12px;
+}
+
+.titlePage {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex: 50%;
+    font-family: quite-magical, cursive;
+    display: flex;
+}
+
+.title {
+    margin: 8% 5% 5% 5%;
+    font-size: 7em;
+}
+
+.titlePage > p {
+    font-size: 2em;
+    position: absolute;
+    margin-top: 1%;
+    font-family: 'Mrs Sheppards', cursive;
+    text-decoration: underline;
+}
+
+.stats {
+    width: 100%;
+    flex: 25%;
+    position: relative;
+    font-family: quite-magical, cursive;
+    font-size: 3em;
+}
+
+.statsBox {
+    background-color: tan;
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    border-radius: 12px;
+}
+
+.mainBody {
+    height: 85%;
+    display: flex;
+    position: relative;
+    background-image: url(images/background2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.gameInfo {
+    height: 100%;
+    width: 20%;
+}
+
+.attempts, 
+.accuracy {
+    top: 25%;
+    left: 10%;
+    display: inline-block;
+    position: relative;
+}
+
+.gameArea {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.row1,
+.row2,
+.row3 {
+    height: 24%;
+    width: 85%;
+    display: flex;
+    margin: auto 6%;
+}
+
+.row1 {
+    margin-top: 1%;
+}
+
+.cardContainer {
+    width: 16.66%;
+    height: 100%;
+    position: relative;
+}
+
+.card > * {
+    border-radius: 12px;
+}
+
+.card {
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    background-color: tan;
+    border-radius: 12px;
+    position: relative;
+    float: left;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.front > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.back {
+    background-color: tan;
+    background-image: url(images/PuglieFace_01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    cursor: pointer;  
+}
+
+.faded {
+    opacity: 0.7;
+}
+
+.card:hover > .back { 
+    transform: scale(1.05);
+    transition: all .1s ease-in-out;
+}
+
+.pugImage {
+    height: 100%;
+    width: 100%;
+}
+
+.puglieDiv {
+    position: absolute;
+    bottom: 9%;
+    right: 2%;
+}
+
+.puglie {
+    height: 80%;
+    width: 80%;
+}
+
+.modal {
+    font-family: quite-magical, cursive;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modalContent {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: tan;
+    border: white solid;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 12px;
+    text-align: center; 
+}
+
+.modalContent > h1 {
+    font-size: 4em;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.modalContent > p {
+    font-size: 3em;
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+.modalContent > button {
+    margin: 0 40%;
+    margin-bottom: 5px;
+}
+
+.showModal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.reset {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    font-family: quite-magical;
+    font-size: 2em;
+    background-color: tan;
+    border-radius: 12px;
+    border: white solid 2px;
+    cursor: pointer;
+}
+
+.exitButton {
+    position: relative;
+    right: 5%;
+    top: 5%;
+    width: 1.5em;
+    line-height: 1em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: chocolate;
+    font-size: 2em;
+}
+
