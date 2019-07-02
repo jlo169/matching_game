@@ -6,8 +6,9 @@ function initializeApp() {
     $('.gameArea').on('click', '.back', cardClicked);
     $('.gameArea').on('click', '.reset', resetEverything);
     $('.gameArea').on('dblclick', '.front', togglePugModal);
+    $('.gameArea').on('dbltouch')
     $('.exitButton').on('click', exitPugModal);
-    $('.victory').on('click', resetEverything);
+    $('.victory').on('click', resetVictory);
 }
 
 var firstCardClicked = null;
@@ -135,6 +136,18 @@ function resetEverything() {
     matchCounter = 0;
     matchAttempts = 0;
     matchAccuracy = 0; 
+    gamesPlayed = 0;
+    $('.attempts').text(`Attempts 0`);
+    $('.accuracy').text(`Accuracy 0%`);
+    $('.gameArea').empty();
+    cardFaces = makeCardArray(cardArray);
+    generateGameBoard();
+}
+
+function resetVictory() {
+    matchCounter = 0;
+    matchAttempts = 0;
+    matchAccuracy = 0; 
     $('.attempts').text(`Attempts 0`);
     $('.accuracy').text(`Accuracy 0%`);
     $('.gameArea').empty();
@@ -157,7 +170,3 @@ function togglePugModal() {
 function exitPugModal() {
     $('.view').toggleClass('showModal');
 }
-
-
-
-

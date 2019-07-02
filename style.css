@@ -17,15 +17,19 @@ body {
     position: relative;
 }
 
+.logo {
+    flex: 25%;
+    position: relative;
+}
+
 .pugLogo {
     background-color: tan;
     display: inline-flex;
-    position: relative;
+    position: absolute;
     height: 90%;
     width: 90%;
     top: 5%;
     left: 5%;
-    flex: 25%;
     border-radius: 12px;
 }
 
@@ -72,7 +76,7 @@ body {
 }
 
 .mainBody {
-    height: 85%;
+    height: 80vh;
     display: flex;
     position: relative;
     background-image: url(images/background2.png);
@@ -254,3 +258,44 @@ body {
     font-size: 2em;
 }
 
+@media ( max-width: 769px ) {
+    .attempts, 
+    .accuracy {
+        top: 25%;
+        left: 10%;
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 5rem;
+        margin-top: 15%;
+    }
+}
+
+@media only screen and ( max-width: 376px ) {
+    .header {
+        height: 15vh;
+    }
+
+    .mainBody {
+        height: 85vh;
+    }
+
+    .titlePage > p {
+        top: 10%;
+        font-size: 1.5rem;
+    }
+
+    .title {
+        margin-top: 30%;
+        font-size: 2.2rem;
+    }
+
+    .attempts, 
+    .accuracy {
+        top: 0;
+        font-size: 1.2rem;
+    }
+}
