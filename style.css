@@ -62,7 +62,7 @@ body {
     flex: 25%;
     position: relative;
     font-family: quite-magical, cursive;
-    font-size: 3em;
+    /* font-size: 3em; */
 }
 
 .statsBox {
@@ -95,31 +95,21 @@ body {
     left: 10%;
     display: inline-block;
     position: relative;
+    font-size: 3rem;
 }
 
 .gameArea {
     height: 100%;
     width: 100%;
     position: relative;
-}
+    display: inline-block;
 
-.row1,
-.row2,
-.row3 {
-    height: 24%;
-    width: 85%;
-    display: flex;
-    margin: auto 6%;
-}
-
-.row1 {
-    margin-top: 1%;
 }
 
 .cardContainer {
+    height: 24%;
     width: 16.66%;
-    height: 100%;
-    position: relative;
+    display: inline-block;
 }
 
 .card > * {
@@ -258,14 +248,20 @@ body {
     font-size: 2em;
 }
 
-@media ( max-width: 769px ) {
+/*
+====================================
+** Mobile Portrait Responsiveness **
+====================================
+*/
+
+@media only screen and ( max-width: 769px ) {
     .attempts, 
     .accuracy {
-        top: 25%;
+        top: 30%;
         left: 10%;
         display: inline-block;
         position: relative;
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .title {
@@ -280,7 +276,7 @@ body {
     }
 
     .mainBody {
-        height: 85vh;
+        height: 120vh;
     }
 
     .titlePage > p {
@@ -295,7 +291,76 @@ body {
 
     .attempts, 
     .accuracy {
-        top: 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .cardContainer {
+        height: 15%;
+        width: 33%;
+        display: inline-block;
+        /* margin: auto 6%; */
+    }
+
+    .modal {
+        transform: scale(0.8);
+    }
+
+    .puglieDiv {
+        display: none;
+    }
+
+    .reset {
+        font-size: 1.5rem;
     }
 }
+
+/*
+=====================================
+** Mobile Landscape Responsiveness **
+=====================================
+*/
+
+@media only screen and ( orientation: landscape ) and ( max-height: 770px ) {
+    .logo {
+        flex: 20%;
+    }
+
+    .title {
+        font-size: 6rem;
+        margin-top: 12%;
+    }
+
+    .puglieDiv {
+        bottom: 5%;
+    }
+}
+
+@media only screen and ( orientation: landscape ) and ( max-height: 380px ) {
+    .logo {
+        flex: 10%;
+    }
+
+    .titlePage > p {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-top: 10%;
+    }
+
+    .attempts, 
+    .accuracy {
+        top: 20%;
+        font-size: 1.5rem; 
+    }
+
+    .puglieDiv {
+        display: none;
+    }
+
+    br {
+        font-size: 0;
+    }
+}
+

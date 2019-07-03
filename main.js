@@ -62,25 +62,20 @@ function runPuglieRun() {
 }
 
 function generateGameBoard() {
+    for (var i = 0; i < 18; i++) {
+        var makeCardContainer = $('<div>').addClass('cardContainer');
+        var makeCard = $('<div>').addClass('card');
+        var makeFront = $('<div>').addClass('front');
+        var makeBack = $('<div>').addClass('back');
 
-    for (var rowNum = 1; rowNum <=3; rowNum++) {
-        var makeRow = $('<div>').addClass('row' + rowNum);
-        for (var i = 1; i <= 6; i++) {
-            var makeCardContainer = $('<div>').addClass('cardContainer');
-            var makeCard = $('<div>').addClass('card');
-            var makeFront = $('<div>').addClass('front');
-            var makeBack = $('<div>').addClass('back');
+        var randomCardIndex = Math.floor(Math.random() * cardFaces.length);
+        var cardFront = $('<img>').attr('src', cardFaces[randomCardIndex]);
+        cardFaces.splice(randomCardIndex, 1);
 
-            var randomCardIndex = Math.floor(Math.random() * cardFaces.length);
-            var cardFront = $('<img>').attr('src', cardFaces[randomCardIndex]);
-            cardFaces.splice(randomCardIndex, 1);
-
-            makeFront.append(cardFront);
-            makeCard.append(makeFront, makeBack);
-            makeCardContainer.append(makeCard);
-            makeRow.append(makeCardContainer);
-        }
-        $('.gameArea').append(makeRow)
+        makeFront.append(cardFront);
+        makeCard.append(makeFront, makeBack);
+        makeCardContainer.append(makeCard);
+        $('.gameArea').append(makeCardContainer);
     }
     var makeResetButton = $('<button>').addClass('reset').text('Reset');
     $('.gameArea').append(makeResetButton);
