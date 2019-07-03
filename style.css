@@ -261,6 +261,34 @@ body {
 ====================================
 */
 
+@media only screen and ( max-width: 1080 ) {
+    .logo {
+        flex: 15%;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .attempts, 
+    .accuracy {
+        top: 30%;
+        left: 10%;
+        display: inline-block;
+        position: relative;
+        font-size: 2.2rem;
+    }
+
+    .cardDeckContainer {
+        width: 100%;
+    }
+
+    .cardContainer {
+        height: 24%;
+        width: 33.33%;
+    }
+}
+
 @media only screen and ( max-width: 769px ) {
     .logo {
         flex: 25%;
