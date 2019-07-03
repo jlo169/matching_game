@@ -18,7 +18,7 @@ body {
 }
 
 .logo {
-    flex: 25%;
+    flex: 15%;
     position: relative;
 }
 
@@ -104,6 +104,13 @@ body {
     position: relative;
     display: inline-block;
 
+}
+
+.cardDeckContainer {
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
 }
 
 .cardContainer {
@@ -255,6 +262,10 @@ body {
 */
 
 @media only screen and ( max-width: 769px ) {
+    .logo {
+        flex: 25%;
+    }
+
     .attempts, 
     .accuracy {
         top: 30%;
@@ -267,6 +278,11 @@ body {
     .title {
         font-size: 5rem;
         margin-top: 15%;
+    }
+
+    .cardDeckContainer {
+        width: 94%;
+        margin-left: 3%;
     }
 }
 

@@ -62,6 +62,7 @@ function runPuglieRun() {
 }
 
 function generateGameBoard() {
+    var makeCardDeckContainer = $('<div>').addClass('cardDeckContainer');
     for (var i = 0; i < 18; i++) {
         var makeCardContainer = $('<div>').addClass('cardContainer');
         var makeCard = $('<div>').addClass('card');
@@ -75,8 +76,9 @@ function generateGameBoard() {
         makeFront.append(cardFront);
         makeCard.append(makeFront, makeBack);
         makeCardContainer.append(makeCard);
-        $('.gameArea').append(makeCardContainer);
+        makeCardDeckContainer.append(makeCardContainer);
     }
+    $('.gameArea').append(makeCardDeckContainer);
     var makeResetButton = $('<button>').addClass('reset').text('Reset');
     $('.gameArea').append(makeResetButton);
     runPuglieRun();
