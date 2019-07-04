@@ -261,31 +261,10 @@ body {
 ====================================
 */
 
-@media only screen and ( max-width: 1080 ) {
-    .logo {
-        flex: 15%;
-    }
-
+@media only screen and ( max-width: 1001 ) {
     .title {
-        font-size: 4rem;
-    }
-
-    .attempts, 
-    .accuracy {
-        top: 30%;
-        left: 10%;
-        display: inline-block;
-        position: relative;
-        font-size: 2.2rem;
-    }
-
-    .cardDeckContainer {
-        width: 100%;
-    }
-
-    .cardContainer {
-        height: 24%;
-        width: 33.33%;
+        font-size: 5.5rem;
+        margin-top: 10%;
     }
 }
 
