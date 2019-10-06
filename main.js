@@ -6,7 +6,6 @@ function initializeApp() {
     $('.gameArea').on('click', '.back', cardClicked);
     $('.gameArea').on('click', '.reset', resetEverything);
     $('.gameArea').on('dblclick', '.front', togglePugModal);
-    $('.gameArea').on('dbltouch')
     $('.exitButton').on('click', exitPugModal);
     $('.victory').on('click', resetVictory);
 }
