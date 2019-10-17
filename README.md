@@ -1,17 +1,26 @@
-# Memory Match
+# Jonathan Lo's The Puggening - Matching Game
 
-## Overview
+https://jonathanlo.dev/matching_game/
 
-> Memory match is a game with 18 cards face down and the player has to try and match all 9 pairs of matching cards by remembering the position of the cards.
-Once the player has match 2 cards they will be displayed face up until all pairs have been matched. Once all pairs have been matched the user will be
-displayed a message that they have won the game. As the user clicks through the cards stats will be kept letting the user know how many attempts and the
-accuracy of their choices.
+Jonathan Lo's The Puggening is the latest game release from the much acclaimed Jonathan Lo where players are introduced to a tranquil world and test their wits to match all 9 pictures of pugs (plus some extra dogs!). Only by completing all possible matches will players be able to see the ultimate reward. 
 
-> <a href="https://docs.google.com/presentation/d/1zlSHYatpaPsrq4LuOtyuE-RRIom4vRo-lXovQ0zPV0U/pub?start=false&loop=false&delayms=3000" target="_blank">Design Overview</a>
+### Features
+- VISCERAL gameplay: Players flip cards one by one to reveal adorable dogs (mostly pugs)
+- MODALS: While some players play for the riveting gameplay, some want to just see the dogs. Players can double clicking a revealed card, a modal will pop up showing a larger picture of the dog in question. 
+- STAT TRACKING: Think you can get into the Puggening esport scene? The game offers stat tracking to help you monitor your growth as a player.
+- REPLAYABILITY: While each game offers 9 pictures overall to match, there are DOUBLE (read 18) the amount of actual pictures to keep your visual palette fresh!
 
-> <a href="https://drive.google.com/open?id=0B3R9g7F9YRS6SHd3Q3lRdWF0RkU" target="_blank">Flow Document</a>
+### Future Improvements
+- As players match more cards, make the gif of Pugly on bottom right walk closer and closer to some food for visual feedback of progress.
+- Card Flipping motions
+- Persistent stat tracking through refreshes
+- More media queries to fit more device resolutions. 
+- More pictures?
+- Pugs
 
-> ### Versions
-> - Version 1.0 (v1.0) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version1.0">View Details</a>
-> - Version 0.5 (v0.5) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version0.5">View Details</a>
-> - Version 0.1 (v0.1) - <a href="https://github.com/Learning-Fuze/memory_match/tree/version0.1">View Details</a>
+### Technology 
+
+Created with Javascript ES5, HTML, CSS, Bootstrap 3, and jQuery.
+
+### Author
+- Jonathan Lo (https://github.com/jlo169)
