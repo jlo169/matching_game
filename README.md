@@ -7,7 +7,7 @@ Jonathan Lo's The Puggening is the latest game release from the much acclaimed J
 ### Features
 - VISCERAL gameplay: Players flip cards one by one to reveal adorable dogs (mostly pugs)
 - MODALS: While some players play for the riveting gameplay, some want to just see the dogs. Players can double clicking a revealed card, a modal will pop up showing a larger picture of the dog in question. 
-- STAT TRACKING: Think you can get into the Puggening esport scene? The game offers stat tracking to help you monitor your growth as a player.
+- STAT TRACKING: Think you can get into The Puggening esport scene? The game offers stat tracking to help you monitor your growth as a player which can be possibly analyzed to further your game.
 - REPLAYABILITY: While each game offers 9 pictures overall to match, there are DOUBLE (read 18) the amount of actual pictures to keep your visual palette fresh!
 
 ### Future Improvements
